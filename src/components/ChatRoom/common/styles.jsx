@@ -68,6 +68,9 @@ export const ButtonMessage = styled(Box)({
   borderRadius: '100%',
   backgroundColor: s.bfc,
   cursor: 'pointer',
+  '&:hover': {
+    opacity: 0.8,
+  },
 });
 
 export const WrapperIncomingMessage = styled(Box)({

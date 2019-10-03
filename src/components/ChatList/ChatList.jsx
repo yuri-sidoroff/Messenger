@@ -75,7 +75,7 @@ export default ({
               <Text>{item.roomId}</Text>
               <Text>{item.channelId}</Text>
             </Header>
-            <Text>{item.body}</Text>
+            <Text>{item.body.length < 20 ? item.body : item.body.slice(0,20) + '...'}</Text>
           </MessageBox>
         )}
       </Motion>

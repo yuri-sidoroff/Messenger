@@ -64,6 +64,12 @@ export default ({
     setNewMessage('');
   };
 
+  const sendMessageOnKey = event => {
+    if (event.keyCode === 13 && event.ctrlKey) {
+      handleSendMessage(newMessage);
+    }
+  };
+
   const arrIncMessage = incMessage
     .filter(item => item.roomId === chatRoom.roomId)
     .filter(item => item.channelId === chatRoom.channelId);
@@ -140,6 +146,7 @@ export default ({
         placeholder={
           chatRoom.roomId === 'Room name' ? null : 'Enter your message...'
         }
+        onKeyDown={event => sendMessageOnKey(event)}
         onChange={event => setNewMessage(event.target.value)}
       />
       <ButtonMessage onClick={() => handleSendMessage(newMessage)}>

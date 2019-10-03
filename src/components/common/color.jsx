@@ -1,4 +1,4 @@
-//color theme - brown
+//color theme - orange
 export const bgc = '#adadad'; //background color
 export const hdm = '#e18e05'; //header, listmessage, input, incoming message color
 export const bfc = '#a92c06'; //line, border color
